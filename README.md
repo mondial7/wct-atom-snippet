@@ -1,7 +1,7 @@
 # wct-atom-snippet
 web-component-test snippet for Atom
 
-```json
+```
 '.text.html.basic':
   'WCT Component Tests':
     'prefix': 'testwct'
