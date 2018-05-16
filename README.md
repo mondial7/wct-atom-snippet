@@ -23,16 +23,10 @@ web-component-test snippet for Atom
 
         <test-fixture id="Baby">
           <template>
-            <my-kid></my-kid>
+            <${1:COMPONENT-NAME}></${1:COMPONENT-NAME}>
           </template>
         </test-fixture>
-${2:
-        <test-fixture id="Boy">
-          <template>
-            <my-kid birthday="16-03-1995"></my-kid>
-          </template>
-        </test-fixture>
-}
+
         <script>
           suite('${1:COMPONENT-NAME}', () => {
             let element;
@@ -46,14 +40,7 @@ ${2:
             test('aka baby-test', () => {
               assert.equal(element.birthday, '01-01-1970');
             });
-${2:
-            /**
-             * Test properties assignments
-             */
-            test('with properties assignments', () => {
-              assert.equal(element.birthday, '01-01-1970');
-            \\});
-}
+
           });
         </script>
 
